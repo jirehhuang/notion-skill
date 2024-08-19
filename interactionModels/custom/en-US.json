@@ -1,0 +1,192 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "naw",
+            "nah",
+            "nope",
+            "nevermind",
+            "no thank you",
+            "no"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "item_query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "QueryIntent",
+          "samples": [
+            "run {item_query}",
+            "execute {item_query}",
+            "import {item_query}",
+            "please {item_query}",
+            "help me {item_query}",
+            "do {item_query}",
+            "write down {item_query}",
+            "store {item_query}",
+            "add {item_query}",
+            "add task {item_query}",
+            "add a reminder to {item_query}",
+            "remind me to {item_query}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "item_discipline",
+              "type": "Disciplines"
+            },
+            {
+              "name": "item_query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "MarkDisciplineIntent",
+          "samples": [
+            "mark discipline {item_discipline} as done",
+            "mark {item_discipline} as done",
+            "mark discipline {item_discipline} as complete",
+            "mark {item_discipline} as complete",
+            "mark discipline {item_discipline}",
+            "mark {item_discipline}",
+            "complete {item_discipline}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ReadTasksIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Housework",
+                  "Cleaning"
+                ],
+                "value": "Chores"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Work Out",
+                  "Workout",
+                  "Gym",
+                  "Calisthenics"
+                ],
+                "value": "Exercise"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Play Guitar",
+                  "Practice Guitar"
+                ],
+                "value": "Guitar"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Texts",
+                  "Messages",
+                  "Respond To Texts",
+                  "Respond To Messages"
+                ],
+                "value": "Respond"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Scripture Memory"
+                ],
+                "value": "Bible Memory"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Intercede",
+                  "Pray",
+                  "Prayer"
+                ],
+                "value": "Intercession"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Devotion",
+                  "Devo",
+                  "Devos",
+                  "Read Bible",
+                  "Bible Reading",
+                  "Read Scripture",
+                  "Scripture Reading",
+                  "Quiet Time",
+                  "Draw Near"
+                ],
+                "value": "Devotions"
+              }
+            }
+          ],
+          "name": "Disciplines"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "purchase",
+                  "buy",
+                  "to grocery list",
+                  "to groceries",
+                  "to shopping",
+                  "to my shopping list",
+                  "groceries",
+                  "grocery",
+                  "grocery list",
+                  "shopping list"
+                ],
+                "value": "Shopping"
+              }
+            }
+          ],
+          "name": "TasksFilters"
+        }
+      ],
+      "invocationName": "my brain"
+    }
+  }
+}
